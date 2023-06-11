@@ -1,13 +1,20 @@
+/* this section at the top contains code 
+that affects the entire document
+and is located here for easy viewing
+also the header if the body also defined here since it is, ya know, at the top!*/
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
+/*background color of the entire page
+might be overridden if you have darkmode extenstions in your browser*/
 body {
     background-color: #d9dcd6;
 }
 
+/*styling specific to the header, and the elements inside it*/
 .header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -20,10 +27,11 @@ body {
     font-size: 48px;
 }
 
+/*some fancy extra styling to the company name at the top*/
 .header h1 .seo {
     color: #d9dcd6;
 }
-
+/* defines the navigation links at the top right of the header*/
 .header nav {
     padding-top: 15px;
     margin-right: 20px;
@@ -41,6 +49,8 @@ body {
     margin-left: 25px;
 }
 
+/*this defines the size of text and the size/color of links 
+on the entire page outside the header*/
 a {
     color: #ffffff;
     text-decoration: none;
@@ -50,7 +60,11 @@ p {
     font-size: 16px;
 }
 
-.hero {
+/*the background class is the main picture on the page
+and is the biggest item visually.
+its size is defined here*/
+
+.background {
     height: 800px;
     width: 100%;
     margin-bottom: 25px;
@@ -59,6 +73,21 @@ p {
     background-position: center;
 }
 
+/*next we have two sections of main content in the body.
+the first, the content class, takes the rest of the page,
+and houses the main content. its built in the <main> element 
+of the HTML file.
+the second, the benefits class, takes up a samll column
+on the right side of the page. it is structured under the 
+<aside> element in the HTML*/
+
+.content {
+    width: 75%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/*some of the images in the main section are on the left or right side, that is defined here*/
 .float-left {
     float: left;
     margin-right: 25px;
@@ -69,12 +98,28 @@ p {
     margin-left: 25px;
 }
 
-.content {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
+/*the main boxes of the content class*/
+.content-box {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
 }
 
+/*all images in the content class set to 200 pixels*/
+.content img {
+    max-height: 200px;
+}
+/*all HTML h2 size in the content class. the <p> class for text was already defined above*/
+.content h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/*benefits/aside class, on the right side of the page
+this section defines the size of the <aside> section on the right*/
 .benefits {
     margin-right: 20px;
     padding: 20px;
@@ -86,108 +131,25 @@ p {
     background-color: #2589bd;
 }
 
-.benefit-lead {
+/*the size of each box of text in the aside*/
+.benefit-box {
     margin-bottom: 32px;
     color: #ffffff;
 }
 
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3 {
+.benefit-box h3 {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-lead img {
+/*the size of each image in the aside*/
+.benefit-box img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization img {
-    max-height: 200px;
-}
-
-.online-reputation-management img {
-    max-height: 200px;
-}
-
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-.search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
+/*fianlly, the footer*/
 .footer {
     padding: 30px;
     clear: both;
